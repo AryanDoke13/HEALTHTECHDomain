@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Emergency Blood & Medicine Finder</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1 class="brand">🩸 Emergency Finder</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="#search">Search</a></li>
+        <li><a href="#add">Add</a></li>
+        <li><a href="#requests">Requests</a></li>
+        <li><a href="#data">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section id="search" class="card">
+    <h2>Search donors & medicines</h2>
+    <form id="searchForm" class="form-grid">
+      <label>Type<select id="filterType"><option value="all">All</option><option value="blood">Blood</option><option value="medicine">Medicine</option></select></label>
+      <label>Blood group / Medicine<input id="filterQuery" type="text" placeholder="e.g. O+, Paracetamol"/></label>
+      <label>City<input id="filterCity" type="text" placeholder="e.g. Pune"/></label>
+      <button id="btnSearch" type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+  </section>
+  <section id="add" class="card">
+    <h2>Add Donor / Medicine Provider</h2>
+    <form id="addForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="contact" placeholder="Contact" required />
+      <input type="text" id="item" placeholder="Blood group or Medicine" required />
+      <input type="text" id="city" placeholder="City" required />
+      <textarea id="notes" placeholder="Notes"></textarea>
+      <select id="entryType">
+        <option value="blood">Blood</option>
+        <option value="medicine">Medicine</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+  </section>
+  <section id="requests" class="card">
+    <h2>Emergency Requests</h2>
+    <form id="requestForm">
+      <input type="text" id="reqName" placeholder="Name" required />
+      <input type="text" id="reqContact" placeholder="Contact" required />
+      <input type="text" id="reqItem" placeholder="Required Item" required />
+      <input type="text" id="reqCity" placeholder="City" required />
+      <textarea id="reqNotes" placeholder="Notes"></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+    <div id="requestList"></div>
+  </section>
+  <section id="data" class="card">
+    <h2>Data Management</h2>
+    <button id="exportJson">Export JSON</button>
+    <button id="exportCsv">Export CSV</button>
+    <input type="file" id="importFile" />
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

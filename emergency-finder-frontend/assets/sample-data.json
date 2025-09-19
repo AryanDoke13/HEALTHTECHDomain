@@ -1,0 +1,9 @@
+{
+  "providers":[
+    {"id":1,"type":"blood","name":"Aryan","contact":"9999999999","item":"O+","city":"Mumbai","notes":"Available evenings"},
+    {"id":2,"type":"medicine","name":"Tanisha","contact":"8888888888","item":"Paracetamol","city":"Pune","notes":"24/7 Pharmacy"}
+  ],
+  "requests":[
+    {"id":3,"name":"Devang","contact":"7777777777","item":"B+","city":"Nashik","notes":"Urgent"}
+  ]
+}
